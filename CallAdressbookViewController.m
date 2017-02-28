@@ -182,6 +182,7 @@
 
 
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Num" object:nil userInfo: nil];
     [self dismissViewControllerAnimated:YES completion:^{
       [self dismissViewControllerAnimated:YES completion:nil];
     }];
